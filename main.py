@@ -4,7 +4,7 @@
 # Press Double ⇧ to search everywhere for classes, files, tool windows, actions, and settings.
 
 from pinecone import Pinecone, ServerlessSpec
-import secret, json, ast, time, argparse, datetime
+import json, ast, time, argparse, datetime
 import pandas as pd
 import random
 import streamlit as st
