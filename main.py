@@ -178,8 +178,6 @@ if __name__ == '__main__':
     pc = Pinecone(api_key=secret.pinecode_api_key)
     if task == "process":
         process_embeddings(pc)
-    # else:
-    #     query_LLM(pc)
 
     if prompt := st.chat_input("What is up?"):
         with st.chat_message("user"):
