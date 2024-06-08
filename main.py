@@ -86,9 +86,7 @@ def get_bot_response(input):
 def response_generator(pc, prompt):
     response = random.choice(
         [
-            "Hello there! How can I assist you today?",
-            "Hi, human! Is there anything I can help you with?",
-            "Do you need help?",
+            "Hi there! Ask anything about Tanmayi Balla's experience in data science and check if she is the right fit for yout team!!!",
         ]
     )
     if prompt is not None:
