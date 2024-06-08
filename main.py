@@ -101,7 +101,7 @@ def process_embeddings(pc):
     definePcIndex(pc)
     index = pc.Index('pinecode-index')
     print(index.describe_index_stats())
-    llm_client = OpenAI(api_key=secret.openai_api_key)
+    llm_client = OpenAI(api_key=st.secrets["OPENAI_API_KEY"])
     text = process_pdf("TanmayiBallaResume.pdf")
     embedding_df = pd.read_csv('embeddings.csv')
     embeddings = None
@@ -136,11 +136,11 @@ def process_embeddings(pc):
 def query_LLM(pc, user_query):
     index = pc.Index('pinecode-index')
     # print(index.describe_index_stats())
-    openai_embed = OpenAIEmbeddings(model=MODEL, api_key=secret.openai_api_key)
+    openai_embed = OpenAIEmbeddings(model=MODEL, api_key=st.secrets["OPENAI_API_KEY"])
     vector_store = lang_pinecone(index, openai_embed.embed_query, "text", namespace='knowMenamespace')
     # print(vector_store.similarity_search(user_query, k = 3))
     llm = ChatOpenAI(
-        openai_api_key=secret.openai_api_key,
+        openai_api_key=st.secrets["OPENAI_API_KEY"],
         model_name = 'gpt-3.5-turbo-0125',
         temperature = 0.0
     )
@@ -175,7 +175,7 @@ if __name__ == '__main__':
     # print("User Query:", user_query)
     # task = args.task
     task = "infer"
-    pc = Pinecone(api_key=secret.pinecode_api_key)
+    pc = Pinecone(api_key=st.secrets["PINECONE_API_KEY"])
     if task == "process":
         process_embeddings(pc)
 
