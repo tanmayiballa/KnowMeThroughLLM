@@ -9,4 +9,4 @@ def sidebar():
     st.sidebar.markdown(
         "<div style='text-align: center;'><a href='https://www.linkedin.com/in/tanmayiballa'>LinkedIn</a> | <a href='https://tanmayiballa.github.io/'>Portfolio</a> | <a href='https://scholar.google.com/citations?user=bZeCWlwAAAAJ&hl=en&oi=ao'>Google Scholar</a></div>",
         unsafe_allow_html=True)
-    st.sidebar.markdown("<p style='text-align: center;'><strong>Actively seeking full-time opportunities. Open to relocation || Can start immediately</strong></p>", unsafe_allow_html=True)
+    st.sidebar.markdown("<p style='text-align: center;'><strong>Actively seeking full-time opportunities. Open to relocation </strong></p>", unsafe_allow_html=True)
